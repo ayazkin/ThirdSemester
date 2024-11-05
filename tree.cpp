@@ -44,5 +44,11 @@ void DFS(node* root) {
     }
 }
 
-
+void deleteTree(node*& root) {
+    if (!root)
+        return;
+    deleteTree(root->left);
+    deleteTree(root->right);
+    delete root;
+}
 //удалить дерево сделать

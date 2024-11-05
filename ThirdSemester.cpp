@@ -13,4 +13,6 @@ int main()
     ifstream in("in.txt");
     node* tree = createTree(in);
     DFS(tree);
+    deleteTree(tree);
+    DFS(tree);
 }
